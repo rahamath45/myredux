@@ -10,15 +10,15 @@ import { deleteTodo, markComplete } from "../Slices/todoSlice";
 
     return(
         <div style ={{padding:"20px",display:"flex",flexDirection:"column",gap:"10px"}}>
-            {todos.map((todo,index)=>(
-                <div key={index} style={{display:"flex" , gap:"10px",alignItems:"center"}}>
+            {todos.map((todo,index)=>{
+                return <div key={index} style={{display:"flex" , gap:"10px",alignItems:"center"}}>
                 <p  
                 style={todo.completed ? {textDecoration:"line-through"}:{}}
                  onClick={()=>{dispatch(markComplete(index))}} >{todo.task}</p>
                  <button type="button" onClick={()=>{dispatch(deleteTodo(index))
                  }}>detele </button>
                  </div>
-            ))}
+               })}
         </div>
     );
  } ;

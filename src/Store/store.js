@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import themeReducer from "../Slices/themeSlice";
 import todoReducer from "../Slices/todoSlice";
+import postsReducer from "../Slices/PostsSlice";
 
   
 
@@ -9,6 +10,7 @@ import todoReducer from "../Slices/todoSlice";
     reducer:{
           theme: themeReducer,
           todo: todoReducer,
+          post: postsReducer,
     },
   });
 

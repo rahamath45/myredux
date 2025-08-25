@@ -24,3 +24,12 @@ import { createSlice } from "@reduxjs/toolkit";
 
  const todoReducer = todoSlice.reducer;
  export default todoReducer;
+
+ // from api, we are going to export the hooks
+// hooks are generated based on the endpoint names
+// hooks are always starts with 'use'
+// getAllPosts is a query
+// getAllPosts => use + GetAllPosts + Query => useGetAllPostsQuery
+// getPostById => use + GetPostById + Query => useGetPostByIdQuery
+// newPost is a mutation
+// newPost => use + NewPost + Mutation => useNewPostMutation
